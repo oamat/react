@@ -1,0 +1,12 @@
+Vemos la interacción de props y state entre el Componente Padre, Hijo y Nieto. De forma Bidireccional en el caso de App-TodoBox
+El Padre enviará una función al Hijo y esta la ejecutará  'onSubmit' cuando sea necesario.
+Hay que ver los ref que pone el padre al componente Hijo para diferenciarlos. 
+
+Comunicación del Padre -> Hijo: envío de Props o llamadas por referencia a métodos del hijo.
+Comunicación del Hijo -> Padre: Ejecutando funciones(evento) recibidas por parámetro. 
+
+NOTAS:
+Fijarse en constructor y en PropTypes
+Fijarse en función flecha todobox: onChange={(e) => { this.setState({ todoText: e.target.value}) }}
+La prueba consiste en ver la interacción cuando se da al botón Registro. Por que Padre, llama al Hijo. 
+Si hay SetState se ejecutará el render. 

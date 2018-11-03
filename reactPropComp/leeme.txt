@@ -1,0 +1,8 @@
+Vemos la interacción de props y state entre el Componente Padre y el componente Hijo. En esa dirección
+El Padre llamará a funcionens del Hijo  'getValue', las ejecutará cuando sean necesarias.
+Hay que ver los ref que pone el padre al componente Hijo para diferenciarlos. 
+
+NOTAS:
+Fijarse en constructor y en PropTypes
+La prueba consiste en ver la interacción cuando se da al botón Registro. Por que Padre, llama al Hijo. 
+Si hay SetState se ejecutará el render. 

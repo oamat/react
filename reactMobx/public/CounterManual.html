@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <h2>Components</h2>
+    <div id="marco2">Hola!!</div>
+    <div id="marco3">Hola!!</div>
+
+
+    <script type="text/babel">
+
+
+class Aumentar extends React.Component{
+    render(){
+        return(
+            <div>
+            Numero (comp Aumentar): {this.props.numero}
+            <button onClick={this.props.funAumentar} >Aumentar</button>
+            </div>
+        )
+    }
+}
+
+class Disminuir extends React.Component{
+    render(){
+        return(
+            <div>
+            Numero (comp Disminuir): {this.props.numero}
+            <button onClick={this.props.funAumentar} >Disminuir</button>
+            </div>
+        )
+    }
+}
+
+  
+
+    class Principal extends React.Component {
+        constructor(){
+          super();
+          this.state={
+              numero: 0              
+          }
+      }
+      
+      masUno(){          
+          console.log("paso por masUno:" + this.state.numero);
+          this.setState({ numero: this.state.numero + 1 });
+      }
+
+     menosUno(){          
+          console.log("paso por masUno:" + this.state.numero);
+          this.setState({ numero: this.state.numero - 1 });
+      }
+
+       render(){
+            return(
+                <div>
+                Numero (comp Principal): {this.state.numero}
+                <Aumentar numero={this.state.numero} funAumentar={this.masUno.bind(this)}/>
+                <Disminuir numero={this.state.numero} funAumentar={this.menosUno.bind(this)}/>
+                </div>                   
+            );
+       }
+    }
+
+
+ ReactDOM.render(
+        <Principal/>,
+        document.getElementById('marco2')
+      );
+
+
+
+
+    </script>
+  </body>
+</html>
