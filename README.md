@@ -1,6 +1,9 @@
 # react
 Several react projects developed with javaScript, node, etc...
 
+
+*You can find other readme with instructions and descriptions in any folder (project).*
+
 -----------------------------------------------
 # How can I download a folder of this git repo
 
